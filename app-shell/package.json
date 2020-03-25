@@ -1,0 +1,37 @@
+{
+    "name": "app-shell",
+    "version": "1.0.0",
+    "description": "The App Shell - application to be deployed.",
+    "keywords": [
+      "piral"
+    ],
+    "dependencies": {
+      "piral": "0.8.3",
+      "piral-containers": "0.8.3"
+    },
+    "scripts": {
+      "start": "piral debug",
+      "build": "piral build && tsc"
+    },
+    "app": "./src/index.html",
+    "main": "lib/index.js",
+    "pilets": {
+      "files": [
+        ".editorconfig",
+        "prettier.config.js"
+      ],
+      "externals": [],
+      "devDependencies": {},
+      "scripts": {}
+    },
+    "devDependencies": {
+      "@types/node": "latest",
+      "@types/react": "latest",
+      "@types/react-dom": "latest",
+      "@types/react-router": "latest",
+      "@types/react-router-dom": "latest",
+      "piral-cli": "0.8.3",
+      "typescript": "latest"
+    },
+    "typings": "lib/index.d.ts"
+  }
