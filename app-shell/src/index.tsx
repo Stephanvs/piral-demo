@@ -5,10 +5,10 @@ import { createPiral, Piral, SetRoute } from 'piral';
 import { createContainerApi } from 'piral-containers';
 
 const piral = createPiral({
-  requestPilets() {
-    return fetch('http://localhost:9000/api/v1/pilet')
-      .then(res => res.json())
-      .then(res => res.items);
+  async requestPilets() {
+    const res = await fetch('http://localhost:9000/api/v1/pilet');
+    const res_1 = await res.json();
+    return res_1.items;
   },
   extendApi: [createContainerApi()],
 });
